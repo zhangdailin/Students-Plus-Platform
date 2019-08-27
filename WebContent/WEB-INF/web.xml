@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+	<session-config>
+		<session-timeout>30</session-timeout>
+	</session-config>
+
+	<display-name>CloudComputing</display-name>
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+
+    <filter>
+        <filter-name>LoginFilter</filter-name>
+        <filter-class>com.czy.filter.LoginFilter</filter-class>
+    </filter>    
+    
+	<servlet>
+		<servlet-name>LoginServlet</servlet-name>
+		<servlet-class>com.czy.servlet.LoginServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>RegisterServlet</servlet-name>
+		<servlet-class>com.czy.servlet.RegisterServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>LogoutServlet</servlet-name>
+		<servlet-class>com.czy.servlet.LogoutServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>EditInfoServlet</servlet-name>
+		<servlet-class>com.czy.servlet.EditInfoServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>AddToCartServlet</servlet-name>
+		<servlet-class>com.czy.servlet.AddToCartServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>UploadServlet</servlet-name>
+		<servlet-class>com.czy.servlet.UploadServlet</servlet-class>
+	</servlet>
+  <servlet>
+    <servlet-name>AuthorizeServlet</servlet-name>
+    <servlet-class>com.czy.servlet.AuthorizeServlet</servlet-class>
+  </servlet>
+
+
+	<servlet-mapping>
+		<servlet-name>LoginServlet</servlet-name>
+		<url-pattern>/servlet/LoginServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>RegisterServlet</servlet-name>
+		<url-pattern>/servlet/RegisterServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>LogoutServlet</servlet-name>
+		<url-pattern>/servlet/LogoutServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>EditInfoServlet</servlet-name>
+		<url-pattern>/servlet/EditInfoServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>AddToCartServlet</servlet-name>
+		<url-pattern>/servlet/AddToCartServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>UploadServlet</servlet-name>
+		<url-pattern>/servlet/UploadServlet</url-pattern>
+	</servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AuthorizeServlet</servlet-name>
+    <url-pattern>/servlet/AuthorizeServlet</url-pattern>
+  </servlet-mapping>
+
+</web-app>
